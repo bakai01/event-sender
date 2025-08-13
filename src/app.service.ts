@@ -1,12 +1,16 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import {
   CompanyCreatedPayload,
-  RabbitmqPublisher,
+  IMessagePublisher,
 } from '@yourgoods/eda-contracts';
+import { EDA_PUBLISHER } from '@yourgoods/eda-contracts/nest';
 
 @Injectable()
 export class AppService {
-  constructor(private readonly publisher: RabbitmqPublisher) {}
+  constructor(
+    @Inject(EDA_PUBLISHER)
+    private readonly publisher: IMessagePublisher,
+  ) {}
 
   getHello(): string {
     return 'Hello World!';
