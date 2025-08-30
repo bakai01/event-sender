@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { EdaContractsModule } from '@yourgoods/eda-contracts/nest';
-import { SOURCE_SERVICE } from '@yourgoods/eda-contracts';
+import { EdaContractsModule } from '@yourgoods-eda/contracts/nest';
+import { SOURCE_SERVICE } from '@yourgoods-eda/contracts';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';

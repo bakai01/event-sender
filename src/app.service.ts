@@ -2,8 +2,8 @@ import { Inject, Injectable } from '@nestjs/common';
 import {
   CompanyCreatedPayload,
   IMessagePublisher,
-} from '@yourgoods/eda-contracts';
-import { EDA_PUBLISHER } from '@yourgoods/eda-contracts/nest';
+} from '@yourgoods-eda/contracts';
+import { EDA_PUBLISHER } from '@yourgoods-eda/contracts/nest';
 
 @Injectable()
 export class AppService {
